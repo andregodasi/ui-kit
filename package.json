@@ -1,0 +1,17 @@
+{
+  "name": "custom-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass --watch css/ui-kit.scss css/ui-kit.css",
+    "sass-min": "node-sass --watch css/ui-kit.scss css/ui-kit.css --output-style compressed"
+  },
+  "keywords": [],
+  "author": "André Gonçalves",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}

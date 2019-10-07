@@ -1,0 +1,177 @@
+$font-family-default: "Raleway",
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+"Noto Sans",
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji" !default;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: $font-family-default;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+// Color system
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(("100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900),
+  $grays);
+
+$blue: #009AF6 !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #FC393E !default;
+$orange: #fd7e14 !default;
+$yellow: #FDB145 !default;
+$green: #2ACC29 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(("blue": $blue,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "white": $white,
+    "gray": $gray-600,
+    "gray-dark": $gray-800),
+  $colors);
+
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(("primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark),
+  $theme-colors);
+
+$font-family-sans-serif: $font-family-default;
+/* BEGIN variaveis custom para check box e radio */
+/* color da fonte */
+$component-active-color: $black !default;
+
+/* background */
+$custom-control-indicator-checked-bg: $white !default;
+
+/* border */
+$custom-control-indicator-checked-border-color: lighten($secondary, 35%) !default;
+/* shadow */
+$custom-control-indicator-focus-box-shadow: 0 0 0 .2rem rgba(108, 117, 125, .5) !default;
+
+$custom-control-indicator-focus-border-color: lighten($secondary, 35%) !default;
+/* bg disabled */
+$custom-control-indicator-checked-disabled-bg: 0 0 0 .2rem rgba(108, 117, 125, .5) !default;
+
+/* bg active disabled */
+$custom-control-indicator-active-bg: lighten($secondary, 35%) !default;
+
+
+/* END variaveis custom para check box e radio */
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
+/* BEGIN validator form */
+.form-control.is-invalid {
+  border: 1px solid rgba(252, 57, 62, 0.2);
+}
+
+.form-control.is-valid {
+  border: 1px solid rgba(42, 204, 41, 0.2);
+}
+
+/* END validator form */
+
+/* BEGIN icon input */
+.input-icon {
+  position: relative;
+}
+
+.input-icon.left span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.input-icon.left input {
+  padding-left: 30px;
+}
+
+.input-icon.right span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.input-icon.right input {
+  padding-right: 30px;
+}
+
+/* END icon input */
+
+
+/* BEGIN bug fix no switch */
+.custom-switch .custom-control-input:checked~.custom-control-label::after {
+  background-color: #000;
+}
+
+/* BEGIN bug fix no switch */
